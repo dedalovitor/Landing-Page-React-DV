@@ -8,7 +8,10 @@ import "../styles/index.css";
 //import your own components
 import Home from "./component/home.jsx";
 import Navbar from "./component/navbar.js";
+import Jumbotron from "./component/jumbotron";
+
+
 
 
 //render your react application
-ReactDOM.render(<Navbar/>, document.querySelector("#app"));
+ReactDOM.render(<Jumbotron />, document.querySelector("#app"));
