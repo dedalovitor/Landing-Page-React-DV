@@ -1,5 +1,5 @@
 //import react into the bundle
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
 // include your styles into the webpack bundle
@@ -11,4 +11,4 @@ import Navbar from "./component/navbar.js";
 
 
 //render your react application
-ReactDOM.render(<Home /> , <Navbar />, document.querySelector("#app"));
+ReactDOM.render(<Navbar/>, document.querySelector("#app"));
