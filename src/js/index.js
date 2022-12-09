@@ -9,9 +9,10 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 import Navbar from "./component/navbar.js";
 import Jumbotron from "./component/jumbotron";
+import ParentHolder from "./component/parentHolder";
 
 
 
 
 //render your react application
-ReactDOM.render(<Jumbotron />, document.querySelector("#app"));
+ReactDOM.render(<ParentHolder />, document.querySelector("#app"));
