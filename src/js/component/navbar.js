@@ -1,27 +1,45 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-//create navbar
-const Navbar = () => {
-  return (
-    <nav className="navbar-dark navbar-expand-lg bg-dark p-2">
-      <div className="container-fluid d-flex align-items-center">
-        <a className="navbar-brand fs-5 fw-semibold mx-5" href="#">Start Booststrap</a>
-        <div className="container-fluid d-flex justify-content-end">
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+
+const Navbar = (props) => {
+	return (
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">{props.title}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">{props.label1}</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">{props.label2}</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">{props.label3}</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">{props.label4}</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div className="collapse navbar-collapse justify-content-end mx-5" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <a className="nav-link active mx-3" aria-current="page" href="#">Home</a>
-            <a className="nav-link mx-3" href="#">About</a>
-            <a className="nav-link mx-3" href="#">Services</a>
-            <a className="nav-link" href="#">Contact</a>
-          </div>
-        </div>
-      </div>
     </nav>
-  );
+
+
+
+	);
+};
+
+Navbar.propTypes = {
+title: PropTypes.string,
+label1: PropTypes.string,
+label2: PropTypes.string,
+label3: PropTypes.string,
+label4: PropTypes.string
 };
 
 export default Navbar;
